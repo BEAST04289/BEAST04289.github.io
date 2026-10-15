@@ -467,6 +467,8 @@ html.js .process.is-live .step.is-active { opacity: 1; }
   position: absolute; inset: 70px 26px 48px 26px;
   display: grid; align-content: center; gap: 18px;
 }
+/* without JS only the first panel shows (the step text carries the rest); with JS, GSAP crossfades them */
+.panel:not([data-panel="1"]) { visibility: hidden; }
 html.js .panel { visibility: hidden; opacity: 0; }
 .panel__title { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); }
 .panel__big { font-size: clamp(1.6rem, 2.6vw, 2.3rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }

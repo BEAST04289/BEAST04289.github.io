@@ -155,7 +155,7 @@ export function createParticleField(canvas, { mobile = false } = {}) {
 
   const base = { x: mobile ? 0 : 0.42, y: mobile ? 0.36 : 0.1 };
   const state = {
-    morph: 0, alpha: 0, targetAlpha: mobile ? 0.5 : 0.9, offX: base.x, offY: base.y,
+    morph: 0, alpha: 0, targetAlpha: mobile ? 0.5 : 0.9, baseAlpha: mobile ? 0.5 : 0.9, offX: base.x, offY: base.y,
     mx: 0, my: 0, tmx: 0, tmy: 0, force: 0, lastMove: -1e9,
     yaw: 0, pitch: 0.3, running: false, past: false, raf: 0, t0: performance.now(), w: 1, h: 1, pr: 1,
   };
@@ -167,6 +167,8 @@ export function createParticleField(canvas, { mobile = false } = {}) {
     canvas.width = state.w = Math.max(1, w);
     canvas.height = state.h = Math.max(1, h);
     gl.viewport(0, 0, state.w, state.h);
+    // narrower desktops put the hero copy over the sphere, so it steps back a little there
+    state.baseAlpha = mobile ? 0.5 : state.w / state.h < 1.45 ? 0.7 : 0.9;
   }
 
   window.addEventListener('pointermove', (e) => {
@@ -231,7 +233,7 @@ export function createParticleField(canvas, { mobile = false } = {}) {
       const spread = smooth(0, 0.5, p);
       state.offX = lerp(base.x, 0, spread);
       state.offY = lerp(base.y, 0, spread);
-      state.targetAlpha = lerp(mobile ? 0.5 : 0.9, mobile ? 0.3 : 0.45, smooth(0.25, 0.7, p)) * (1 - smooth(0.86, 1, p));
+      state.targetAlpha = lerp(state.baseAlpha, mobile ? 0.3 : 0.45, smooth(0.25, 0.7, p)) * (1 - smooth(0.86, 1, p));
       state.past = p >= 0.999;
       if (state.past) api.stop(); else if (!document.hidden) api.start();
     },
