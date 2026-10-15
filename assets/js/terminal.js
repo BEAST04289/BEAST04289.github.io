@@ -17,7 +17,7 @@ const COMMANDS = {
     run: () => [
       '<span class="acc">Shaurya Upadhyay</span> — AI engineer in the making · CS @ Manipal University Jaipur',
       'B.Tech CSE · CGPA 8.12/10 · class of 2029 · Pune / Jaipur, India',
-      'I build AI agents, RAG systems and the backend that ships them. <span class="p">Open to AI/ML &amp; SWE internships.</span>',
+      'I build AI agents, RAG systems and the backend that ships them. <span class="p">Open to AI/ML, SWE &amp; SDE roles.</span>',
     ],
   },
   projects: {
@@ -85,7 +85,7 @@ const COMMANDS = {
           '[sudo] password for recruiter: ••••••••',
           '<span class="p">✓ access granted</span>',
           'compiling offer… linking résumé… <span class="gold">done</span>',
-          `next step → ${link('mailto:shaurya04289@gmail.com?subject=Internship%20opportunity', 'send the email')} 🎉`,
+          `next step → ${link('mailto:shaurya04289@gmail.com?subject=Opportunity%20for%20Shaurya', 'send the email')} 🎉`,
         ];
       }
       return ['nice try. this incident will be reported to /dev/null'];
