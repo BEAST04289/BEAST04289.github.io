@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shaurya Upadhyay — AI Engineer · RAG &amp; AI Agents</title>
+  <meta name="description" content="Shaurya Upadhyay — CS undergrad at Manipal University Jaipur building AI agents, RAG systems and the backend that ships them. #1 of 28,017 in a live-proctored analytics assessment, Top 100 of 1,400+ in XPRIZE Build with Gemini, Rank 14 of 2,200+ at IIT Madras Synaptix. Open to AI/ML and SWE internships.">
+  <meta name="author" content="Shaurya Upadhyay">
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- Absolute URLs below assume https://beast04289.github.io/ — update them if the site lives elsewhere (e.g. a Vercel domain). -->
+  <link rel="canonical" href="https://beast04289.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shaurya Upadhyay">
+  <meta property="og:title" content="Shaurya Upadhyay — AI Engineer · RAG & AI Agents">
+  <meta property="og:description" content="I build AI agents and RAG systems that ship. #1 of 28,017 · Top 100 XPRIZE Build with Gemini · Rank 14 of 2,200+ IIT Madras.">
+  <meta property="og:url" content="https://beast04289.github.io/">
+  <meta property="og:image" content="https://beast04289.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://beast04289.github.io/assets/img/og.png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>
+    // Progressive enhancement: JS-only states hang off html.js. If the app never boots
+    // (blocked script, old browser), drop the class so every section stays readable.
+    document.documentElement.classList.replace('no-js', 'js');
+    setTimeout(function () {
+      if (!window.__portfolioReady) document.documentElement.classList.remove('js');
+    }, 6000);
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shaurya Upadhyay",
+    "url": "https://beast04289.github.io/",
+    "image": "https://beast04289.github.io/assets/img/avatar.webp",
+    "jobTitle": "AI / Software Engineering student",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Manipal University Jaipur" },
+    "email": "mailto:shaurya04289@gmail.com",
+    "sameAs": ["https://github.com/BEAST04289", "https://www.linkedin.com/in/shaurya--upadhyay/"],
+    "knowsAbout": ["AI agents", "Retrieval-Augmented Generation", "LangGraph", "Python", "FastAPI", "AWS", "Google Cloud"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============================================================ loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__mark" viewBox="0 0 64 64" fill="none">
+        <rect class="loader__box" x="1" y="1" width="62" height="62" rx="18" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+        <text x="32" y="41" text-anchor="middle" fill="#ededed" font-family="Space Grotesk, system-ui, sans-serif" font-weight="600" font-size="24" letter-spacing="-1">SU</text>
+      </svg>
+      <div class="loader__name"><span>Shaurya Upadhyay</span></div>
+      <div class="loader__bar"><span></span></div>
+      <div class="loader__count">000</div>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label">View</span></div></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============================================================ nav -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a class="brand" href="#top" aria-label="Shaurya Upadhyay — back to top">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x=".5" y=".5" width="39" height="39" rx="12" fill="#141414" stroke="rgba(255,255,255,.16)"/>
+          <text x="20" y="26" text-anchor="middle" fill="#ededed" font-family="Space Grotesk, system-ui, sans-serif" font-weight="600" font-size="15" letter-spacing="-.6">SU</text>
+        </svg>
+        <span>Shaurya Upadhyay<small>AI · RAG · Agents</small></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="#contact" data-magnetic><span>Let's talk</span></a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </header>
+  <nav class="menu" id="menu" aria-label="Mobile">
+    <a href="#about"><small>01</small>About</a>
+    <a href="#process"><small>02</small>Process</a>
+    <a href="#work"><small>03</small>Work</a>
+    <a href="#journey"><small>04</small>Journey</a>
+    <a href="#stack"><small>05</small>Stack</a>
+    <a href="#contact"><small>06</small>Contact</a>
+  </nav>
+
+  <canvas class="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ============================================================ hero -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="container hero__inner">
+        <p class="chip hero__status" data-hero><span class="dot-live" aria-hidden="true"></span> Open to AI/ML &amp; SWE internships</p>
+        <p class="hero__role" data-hero><b>AI Engineer</b> · RAG · AI agents · Software engineering</p>
+        <h1 class="hero__title" aria-label="Shaurya Upadhyay">
+          <span class="line" data-hero-line>Shaurya</span>
+          <span class="line" data-hero-line>Upadhyay</span>
+        </h1>
+        <div class="hero__row">
+          <p class="hero__lede" data-hero>I build AI agents and RAG systems that <span class="rotator" data-words="reason,retrieve,act,ship">reason</span> — and the backend that keeps them reliable.</p>
+          <div class="hero__side" data-hero>
+            <ul class="proof" aria-label="Highlights">
+              <li style="--accent: var(--gold)"><b>#1</b> of 28,017 · live-proctored analytics assessment</li>
+              <li style="--accent: var(--violet)"><b>Top 100</b> of 1,400+ · XPRIZE Build with Gemini</li>
+              <li style="--accent: var(--pink)"><b>#14</b> of 2,200+ · IIT Madras Synaptix Frontier AI</li>
+              <li style="--accent: var(--cyan)"><b>Top 25</b> · Hacker House Goa 2026</li>
+            </ul>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#work" data-magnetic><span>See the work</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+              <a class="btn btn--ghost" href="#contact" data-magnetic><span>Get in touch</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__meta" data-hero>
+          <span>CSE · Manipal University Jaipur · Class of 2029</span>
+          <span>Pune / Jaipur, India</span>
+          <a class="scroll-cue" href="#about"><span>Scroll</span><i aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ about / manifesto -->
+    <section class="manifesto" id="about" aria-labelledby="about-title">
+      <div class="container manifesto__pin">
+        <p class="eyebrow" id="about-title">(01) About</p>
+        <p class="manifesto__text" data-scrub-words>I'm a second-year CS undergrad at Manipal University Jaipur building <span class="hl">AI agents</span>, <span class="hl">RAG pipelines</span> and the <span class="hl">backend</span> that makes them dependable — evaluated, observable and deployed on AWS and Google Cloud.</p>
+      </div>
+      <div class="container manifesto__facts">
+        <div class="facts" data-reveal>
+          <figure class="portrait">
+            <picture>
+              <source srcset="assets/img/avatar.webp" type="image/webp">
+              <img src="assets/img/avatar-fallback.jpg" width="440" height="440" alt="Portrait of Shaurya Upadhyay" loading="lazy" decoding="async">
+            </picture>
+          </figure>
+          <dl>
+            <div><dt>Based in</dt><dd>Pune / Jaipur, India</dd></div>
+            <div><dt>Studying</dt><dd>B.Tech CSE, MUJ</dd></div>
+            <div><dt>CGPA</dt><dd>8.12 / 10</dd></div>
+            <div><dt>Graduating</dt><dd>May 2029</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ numbers -->
+    <section class="section numbers" id="numbers" aria-labelledby="numbers-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">(02) By the numbers</p>
+          <h2 class="title" id="numbers-title" data-split>Results, not <em>adjectives</em>.</h2>
+        </header>
+        <div class="stats">
+          <article class="stat" style="--accent: var(--gold)">
+            <div class="stat__top"><span>Assessment</span><span>Top 0.004%</span></div>
+            <div class="stat__value"><span class="num" data-count-from="28017" data-count-to="1" data-prefix="#">#1</span><small>of 28,017</small></div>
+            <p class="stat__label">Live-proctored data analytics assessment<span>Bluestock Fintech · 100/100 in under 10 minutes</span></p>
+          </article>
+          <article class="stat" style="--accent: var(--violet)">
+            <div class="stat__top"><span>Global</span><span>Top 7%</span></div>
+            <div class="stat__value"><span class="num" data-count-from="1400" data-count-to="100" data-prefix="Top ">Top 100</span><small>of 1,400+</small></div>
+            <p class="stat__label">XPRIZE Build with Gemini 2026<span>Sarthi Kalyan · global submissions</span></p>
+          </article>
+          <article class="stat" style="--accent: var(--pink)">
+            <div class="stat__top"><span>Hackathon</span><span>Top 1%</span></div>
+            <div class="stat__value"><span class="num" data-count-from="2200" data-count-to="14" data-prefix="#">#14</span><small>of 2,200+</small></div>
+            <p class="stat__label">IIT Madras Synaptix Frontier AI<span>Sentinel · teams ranked</span></p>
+          </article>
+          <article class="stat" style="--accent: var(--cyan)">
+            <div class="stat__top"><span>Hackathon</span><span>2026</span></div>
+            <div class="stat__value"><span class="num" data-scramble>Top 25</span></div>
+            <p class="stat__label">TigerGraph × Hacker House Goa<span>AI investigation agent · CaseVera</span></p>
+          </article>
+          <article class="stat" style="--accent: var(--green)">
+            <div class="stat__top"><span>Grant</span><span>Solana Foundation</span></div>
+            <div class="stat__value"><span class="num" data-count-from="0" data-count-to="5000" data-prefix="$">$5,000</span></div>
+            <p class="stat__label">Security audit subsidy<span>Awarded through a competitive grant program</span></p>
+          </article>
+          <article class="stat" style="--accent: var(--sky)">
+            <div class="stat__top"><span>Open source</span><span>OWASP</span></div>
+            <div class="stat__value"><span class="num" data-count-from="0" data-count-to="2" data-prefix="">2</span><small>PRs merged</small></div>
+            <p class="stat__label">OWASP OpenCRE, a flagship project<span>A production crash fix and a CodeQL open-redirect fix</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ process (scrollytelling) -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">(03) Process</p>
+          <h2 class="title" id="process-title" data-split>How I build <em>AI systems</em>.</h2>
+          <p class="lede" data-reveal>Six steps I keep coming back to, from a fuzzy idea to an agent people can rely on — each one backed by something I've shipped.</p>
+        </header>
+        <div class="process__grid">
+          <div class="process__steps">
+            <article class="step" data-step="1">
+              <span class="step__n"><b>01</b> / 06 · Define</span>
+              <h3>Pin down the job</h3>
+              <p>Every build starts with a contract: inputs, outputs and failure modes. <b>iWebify</b> turns plain-English requirements into validated, executable app schemas before anything is generated.</p>
+            </article>
+            <article class="step" data-step="2">
+              <span class="step__n"><b>02</b> / 06 · Retrieve</span>
+              <h3>Ground it in real data</h3>
+              <p>RAG with hybrid retrieval. <b>Sarthi Kalyan</b> pairs structured eligibility filters with semantic embeddings across <b>750+ schemes</b>; <b>Sentinel</b> runs local embeddings on ChromaDB + FAISS at <b>$0</b> inference API cost.</p>
+            </article>
+            <article class="step" data-step="3">
+              <span class="step__n"><b>03</b> / 06 · Reason</span>
+              <h3>Orchestrate agents, not prompts</h3>
+              <p>LangGraph state machines split work across focused agents — multi-agent matching in Sarthi Kalyan, and a <b>9-stage</b> compiler pipeline with dependency-aware context isolation in iWebify.</p>
+            </article>
+            <article class="step" data-step="4">
+              <span class="step__n"><b>04</b> / 06 · Act</span>
+              <h3>Act with guardrails</h3>
+              <p>Models propose; rules decide. <b>CaseVera</b> keeps AI investigation separate from deterministic verdict and action logic, with explicit uncertainty and evidence provenance on every decision.</p>
+            </article>
+            <article class="step" data-step="5">
+              <span class="step__n"><b>05</b> / 06 · Evaluate</span>
+              <h3>Measure before you trust</h3>
+              <p>iWebify's <b>20-prompt</b> production and adversarial suite tracks success, repair retries, latency and cost. In Sarthi Kalyan, BigQuery decision logs surfaced a <b>silent scoring bug</b> before it reached users.</p>
+            </article>
+            <article class="step" data-step="6">
+              <span class="step__n"><b>06</b> / 06 · Ship</span>
+              <h3>Deploy, then make it fast</h3>
+              <p><b>SHIELD</b> on AWS cut analysis time from <b>8 minutes to 4.2 seconds</b> and API costs by <b>97%</b> with a scam-fingerprint cache. Sarthi Kalyan runs on Google Cloud with WhatsApp and web front-ends.</p>
+            </article>
+          </div>
+          <div class="process__viz" aria-hidden="true">
+            <div class="viz" id="viz">
+              <div class="viz__hud"><span>pipeline · step <b class="viz__step">01</b> / 06</span><span class="viz__label">define</span></div>
+              <div class="pipe-wrap">
+                <span class="pipe__fill"></span>
+                <ol class="pipe">
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Define</span></li>
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Retrieve</span></li>
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Reason</span></li>
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Act</span></li>
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Evaluate</span></li>
+                  <li><span class="pipe__dot"></span><span class="pipe__name">Ship</span></li>
+                </ol>
+              </div>
+              <div class="panels">
+                <div class="panel" data-panel="1">
+                  <span class="panel__title">spec · illustrative</span>
+<pre class="code"><span class="k">requirement</span>  <span class="s">"booking app for a clinic"</span>
+<span class="k">entities</span>     [Patient, Doctor, Slot]
+<span class="k">pages</span>        <span class="n">4</span>
+<span class="k">validate</span>     pydantic · dependency order
+<span class="k">status</span>       <span class="s">"valid, executable"</span></pre>
+                  <p class="panel__big">Requirements → <em>validated schema</em></p>
+                </div>
+                <div class="panel" data-panel="2">
+                  <span class="panel__title">hybrid retrieval · illustrative</span>
+                  <div class="flow">
+                    <div class="flow__row"><span class="node node--hot"><b>query</b>profile + question</span></div>
+                    <div class="flow__row"><span class="node"><b>filter</b>structured eligibility</span><span class="arrow">+</span><span class="node"><b>embed</b>semantic similarity</span></div>
+                  </div>
+                  <div class="rank"><div>match 1<i style="width:92%"></i></div><div>match 2<i style="width:76%"></i></div><div>match 3<i style="width:61%"></i></div></div>
+                  <p class="panel__big">750+ schemes → <em>the few that fit</em></p>
+                </div>
+                <div class="panel" data-panel="3">
+                  <span class="panel__title">agent orchestration · LangGraph</span>
+                  <div class="loop"><span class="node node--hot"><b>plan</b>route the task</span><span class="node"><b>retrieve</b>fetch context</span><span class="node"><b>respond</b>draft + cite</span></div>
+                  <div class="loop"><span class="node"><b>validate</b>schema check</span><span class="node"><b>repair</b>targeted fix</span><span class="node"><b>state</b>persisted</span></div>
+                  <p class="panel__big">Focused agents, <em>shared state</em></p>
+                </div>
+                <div class="panel" data-panel="4">
+                  <span class="panel__title">guardrails</span>
+                  <div class="flow__row"><span class="node"><b>model</b>proposes</span><span class="arrow">→</span><span class="node node--hot"><b>policy</b>rules decide</span><span class="arrow">→</span><span class="node"><b>action</b>logged</span></div>
+                  <span class="badge">uncertain? <em>ask for more evidence</em></span>
+                  <p class="panel__big">AI investigates. <em>Rules decide.</em></p>
+                </div>
+                <div class="panel" data-panel="5">
+                  <span class="panel__title">eval suite · 20 prompts · illustrative bars</span>
+                  <div class="meter"><div>success<i style="--w:86%"></i></div><div>repair retries<i style="--w:28%"></i></div><div>latency<i style="--w:44%"></i></div><div>cost<i style="--w:22%"></i></div></div>
+                  <p class="panel__big">Production + <em>adversarial</em> prompts</p>
+                </div>
+                <div class="panel" data-panel="6">
+                  <span class="panel__title">SHIELD on AWS</span>
+                  <div class="ship">
+                    <div class="ship__bar">before · 8 minutes<i style="width:100%"></i></div>
+                    <div class="ship__bar ship__bar--after">after · 4.2 seconds<i></i></div>
+                  </div>
+                  <p class="panel__big"><em>99.1%</em> faster · <em>97%</em> cheaper</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ work -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="container section-head work__head">
+        <p class="eyebrow">(04) Selected work</p>
+        <h2 class="title" id="work-title" data-split>Things I've <em>built</em>.</h2>
+      </div>
+      <div class="work__pin">
+        <div class="work__track">
+          <div class="work__intro">
+            <p class="lede">AI agents, retrieval systems and the services around them — each with a result attached and a link to the code.</p>
+            <p class="hint">Keep scrolling
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
+          </div>
+
+          <article class="project" style="--accent: var(--violet)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">01</span><span>Aug 2026</span></div>
+              <div>
+                <h3>Sarthi Kalyan</h3>
+                <p class="project__cat">Multi-agent RAG assistant</p>
+              </div>
+              <span class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4.5a2.5 2.5 0 0 0 2.6 4.4M17 6h2.5a2.5 2.5 0 0 1-2.6 4.4"/></svg>Top 100 / 1,400+ · XPRIZE · CraftNCode finalist</span>
+              <p>A multi-agent system connecting citizens to 750+ government welfare schemes: dual-mode retrieval (eligibility filters + semantic embeddings), BigQuery decision logging, deployed on Google Cloud with WhatsApp and web interfaces.</p>
+              <div class="metrics"><div><b>750+</b><span>schemes</span></div><div><b>Top 7%</b><span>XPRIZE global</span></div><div><b>2</b><span>channels</span></div></div>
+              <ul class="tags"><li>LangGraph</li><li>Gemini API</li><li>FastAPI</li><li>Next.js</li><li>Firestore</li><li>BigQuery</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/SchemeBot" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <g fill="#3a3a3a"><circle cx="70" cy="60" r="3"/><circle cx="110" cy="60" r="3"/><circle cx="150" cy="60" r="3"/><circle cx="250" cy="60" r="3"/><circle cx="290" cy="60" r="3"/><circle cx="330" cy="60" r="3"/><circle cx="70" cy="260" r="3"/><circle cx="110" cy="260" r="3"/><circle cx="150" cy="260" r="3"/><circle cx="250" cy="260" r="3"/><circle cx="290" cy="260" r="3"/><circle cx="330" cy="260" r="3"/><circle cx="50" cy="160" r="3"/><circle cx="350" cy="160" r="3"/></g>
+                <g stroke="#525252" stroke-width="1.4"><path d="M200 160 70 60M200 160 150 60M200 160 290 60M200 160 330 260M200 160 110 260M200 160 50 160M200 160 350 160"/></g>
+                <g fill="#d4d4d4"><circle cx="70" cy="60" r="5"/><circle cx="290" cy="60" r="5"/><circle cx="330" cy="260" r="5"/></g>
+                <rect x="150" y="128" width="100" height="64" rx="16" fill="#141414" stroke="#8a8a8a" stroke-width="1.6"/>
+                <path d="M170 150h60M170 162h44M170 174h52" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project" style="--accent: var(--pink)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">02</span><span>Jun 2026</span></div>
+              <div>
+                <h3>iWebify</h3>
+                <p class="project__cat">LLM application compiler</p>
+              </div>
+              <p>A 9-stage LangGraph pipeline that turns natural-language requirements into validated, executable app schemas — with dependency-aware context isolation and a repair engine that fixes only what the exact Pydantic errors point at.</p>
+              <div class="metrics"><div><b>9</b><span>pipeline stages</span></div><div><b>20</b><span>eval prompts</span></div><div><b>4</b><span>tracked KPIs</span></div></div>
+              <ul class="tags"><li>LangGraph</li><li>FastAPI</li><li>Pydantic</li><li>OpenRouter</li><li>SQLite</li><li>Docker</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/iWEBIFY" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <g stroke="#3f3f3f" stroke-width="1.4"><path d="M110 80H160M220 80H270M305 100V150M270 170H220M160 170H110M85 190V240M110 260H160M220 260H270"/></g>
+                <g fill="#141414" stroke="#525252" stroke-width="1.6"><rect x="60" y="60" width="50" height="40" rx="10"/><rect x="170" y="60" width="50" height="40" rx="10"/><rect x="280" y="60" width="50" height="40" rx="10"/><rect x="280" y="150" width="50" height="40" rx="10"/><rect x="170" y="150" width="50" height="40" rx="10"/><rect x="60" y="150" width="50" height="40" rx="10"/><rect x="60" y="240" width="50" height="40" rx="10"/><rect x="170" y="240" width="50" height="40" rx="10"/></g>
+                <rect x="280" y="240" width="50" height="40" rx="10" fill="#202020" stroke="#d4d4d4" stroke-width="1.8"/>
+                <path d="M297 260l6 6 12-12" stroke="#ededed" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M195 150c0-26 40-26 40 0" stroke="#8a8a8a" stroke-width="1.6" stroke-dasharray="4 5"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project" style="--accent: var(--green)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">03</span><span>Dec 2025</span></div>
+              <div>
+                <h3>Sentinel</h3>
+                <p class="project__cat">RAG agent for financial filings</p>
+              </div>
+              <span class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4.5a2.5 2.5 0 0 0 2.6 4.4M17 6h2.5a2.5 2.5 0 0 1-2.6 4.4"/></svg>Rank 14 / 2,200+ · IIT Madras Synaptix</span>
+              <p>An SEC-filings intelligence agent that parses documents 4× faster than baseline and raises financial alerts in under seven seconds — on local embeddings with ChromaDB + FAISS, so inference API cost is zero.</p>
+              <div class="metrics"><div><b>150 ms</b><span>filing parse</span></div><div><b>&lt;7 s</b><span>to an alert</span></div><div><b>$0</b><span>inference API</span></div></div>
+              <ul class="tags"><li>LangGraph</li><li>ChromaDB</li><li>FAISS</li><li>FastAPI</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/Sentinel" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <g stroke="#262626"><path d="M50 260H360M50 200H360M50 140H360M50 80H360"/></g>
+                <path d="M50 120H360" stroke="#525252" stroke-dasharray="6 6"/>
+                <path d="M50 230 85 214 115 222 150 190 180 200 210 150 235 172 262 98 290 160 320 140 350 176" stroke="#d4d4d4" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+                <circle cx="262" cy="98" r="9" fill="#0f0f0f" stroke="#ededed" stroke-width="2"/>
+                <rect x="226" y="40" width="72" height="26" rx="13" fill="#141414" stroke="#525252"/>
+                <path d="M244 53h36" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project" style="--accent: var(--gold)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">04</span><span>Jan 2026 – now</span></div>
+              <div>
+                <h3>SHIELD</h3>
+                <p class="project__cat">Anti-scam AI platform on AWS</p>
+              </div>
+              <p>An AWS-based scam detection platform for senior citizens, with a DynamoDB Scam Fingerprint Network (79.7% cache hit rate) and Hindi voice-first, accessibility-focused interfaces.</p>
+              <div class="metrics"><div><b>4.2 s</b><span>was 8 minutes</span></div><div><b>91%</b><span>accuracy · 10+ pilots</span></div><div><b>97%</b><span>lower API cost</span></div></div>
+              <ul class="tags"><li>AWS Bedrock</li><li>Textract</li><li>Polly</li><li>DynamoDB</li><li>EC2</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/AWS_AI-FOR-BHARAT" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <path d="M200 40 110 76v74c0 62 39 108 90 126 51-18 90-64 90-126V76z" fill="#141414" stroke="#8a8a8a" stroke-width="1.8" stroke-linejoin="round"/>
+                <g stroke="#d4d4d4" stroke-width="5" stroke-linecap="round"><path d="M148 160v20M166 146v48M184 132v76M202 150v40M220 124v92M238 142v56M256 156v28"/></g>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project" style="--accent: var(--cyan)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">05</span><span>Sep 2026</span></div>
+              <div>
+                <h3>CaseVera</h3>
+                <p class="project__cat">AI investigation agent</p>
+              </div>
+              <span class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4.5a2.5 2.5 0 0 0 2.6 4.4M17 6h2.5a2.5 2.5 0 0 1-2.6 4.4"/></svg>Top 25 · TigerGraph × Hacker House Goa 2026</span>
+              <p>A policy-constrained agent that investigates fraud alerts end to end — retrieval over past cases and policy, evidence with provenance, SAR narratives — while verdicts stay in deterministic rules.</p>
+              <div class="metrics"><div><b>2 / 2</b><span>fraud patterns found</span></div><div><b>20 / 20</b><span>cases written back</span></div><div><b>273</b><span>evidence records</span></div></div>
+              <ul class="tags"><li>Python</li><li>GraphRAG</li><li>Vector search</li><li>TigerGraph</li><li>React</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/CaseVera" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+                <a class="link-pill" href="https://casevera.vercel.app" target="_blank" rel="noopener">Live snapshot<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <rect x="70" y="58" width="150" height="190" rx="16" fill="#141414" stroke="#525252" stroke-width="1.6"/>
+                <path d="M94 92h102M94 116h80M94 140h96M94 164h70M94 188h88" stroke="#3f3f3f" stroke-width="6" stroke-linecap="round"/>
+                <path d="M94 116h80" stroke="#a3a3a3" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="252" cy="176" r="56" fill="#0f0f0f" stroke="#d4d4d4" stroke-width="2"/>
+                <path d="M292 216l42 42" stroke="#d4d4d4" stroke-width="8" stroke-linecap="round"/>
+                <path d="M228 176l16 16 30-32" stroke="#ededed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="project" style="--accent: var(--sky)" data-cursor="view">
+            <div class="project__body">
+              <div class="project__top"><span class="project__idx">06</span><span>2026</span></div>
+              <div>
+                <h3>DugTrio</h3>
+                <p class="project__cat">Verifiable sentiment agent</p>
+              </div>
+              <span class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4.5a2.5 2.5 0 0 0 2.6 4.4M17 6h2.5a2.5 2.5 0 0 1-2.6 4.4"/></svg>Top 10 / 232 · 100x School × Superteam</span>
+              <p>A Telegram agent that scores crypto sentiment from X with RoBERTa and anchors each result on-chain as a verifiable IP asset. Backed by a $5,000 Solana Foundation security-audit subsidy.</p>
+              <div class="metrics"><div><b>$5,000</b><span>Solana grant</span></div><div><b>$450</b><span>hackathon prize</span></div><div><b>Top 10</b><span>of 232 teams</span></div></div>
+              <ul class="tags"><li>Python</li><li>RoBERTa</li><li>FastAPI</li><li>Web3.py</li><li>Story Protocol</li></ul>
+              <div class="project__links">
+                <a class="link-pill" href="https://github.com/BEAST04289/DugTrio" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg>Code</a>
+              </div>
+            </div>
+            <div class="project__art" aria-hidden="true">
+              <svg viewBox="0 0 400 320" fill="none">
+                <path d="M40 150c30-60 60-60 90 0s60 60 90 0 60-60 90 0 50 40 50 40" stroke="#d4d4d4" stroke-width="2.6" stroke-linecap="round"/>
+                <g fill="#141414" stroke="#525252" stroke-width="1.6"><rect x="60" y="230" width="56" height="44" rx="10"/><rect x="142" y="230" width="56" height="44" rx="10"/><rect x="224" y="230" width="56" height="44" rx="10"/><rect x="306" y="230" width="56" height="44" rx="10"/></g>
+                <g stroke="#3f3f3f" stroke-width="2"><path d="M116 252h26M198 252h26M280 252h26"/></g>
+                <g fill="#a3a3a3"><circle cx="88" cy="252" r="5"/><circle cx="170" cy="252" r="5"/><circle cx="252" cy="252" r="5"/></g><circle cx="334" cy="252" r="5" fill="#ededed"/>
+              </svg>
+            </div>
+          </article>
+
+          <div class="work__outro">
+            <h3 class="title" style="font-size:clamp(1.8rem,3vw,2.6rem)">More <em class="serif">projects</em></h3>
+            <ul class="more">
+              <li><a href="https://github.com/BEAST04289/N100-Financial-Intelligence" target="_blank" rel="noopener"><b>N100 Financial Intelligence</b><span>Analytics platform for the Nifty 100: 92 companies, 50+ KPIs, 16 API endpoints</span><i>Python</i></a></li>
+              <li><a href="https://github.com/BEAST04289/VERITAS.AI" target="_blank" rel="noopener"><b>VERITAS.AI</b><span>Generative-AI video detector built on physics checks</span><i>TypeScript</i></a></li>
+              <li><a href="https://github.com/BEAST04289/Avsarathi.ai" target="_blank" rel="noopener"><b>Avsarathi.ai</b><span>WhatsApp-first scheme matching for NSFDC credit schemes · SIH 2026</span><i>Python</i></a></li>
+              <li><a href="https://github.com/BEAST04289/pre-dispatch-returns-risk" target="_blank" rel="noopener"><b>pre-dispatch-returns-risk</b><span>Leakage-safe return-risk scoring with chronological validation</span><i>Python</i></a></li>
+              <li><a href="https://github.com/BEAST04289/AI-IMAGE-GEN" target="_blank" rel="noopener"><b>AI-IMAGE-GEN</b><span>Serverless AI image editor on AWS Bedrock + Lambda</span><i>AWS</i></a></li>
+            </ul>
+            <a class="btn btn--ghost" href="https://github.com/BEAST04289?tab=repositories" target="_blank" rel="noopener" data-magnetic><span>All repositories</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ journey -->
+    <section class="section journey" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">(05) Journey</p>
+          <h2 class="title" id="journey-title" data-split>The path <em>so far</em>.</h2>
+        </header>
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"><span class="timeline__fill"></span></div>
+          <div class="tl" style="--accent: var(--cyan)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Class of 2029</p>
+            <div class="tl__card"><span class="tl__tag">Education</span><h3>B.Tech CSE · Manipal University Jaipur</h3><p>CGPA 8.12/10. Coursework in data structures &amp; algorithms, OOP, DBMS and probability &amp; statistics.</p></div></div>
+          <div class="tl" style="--accent: var(--violet)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Dec 2025</p>
+            <div class="tl__card"><span class="tl__tag">Rank 14 / 2,200+</span><h3>Sentinel · IIT Madras Synaptix</h3><p>RAG agent for SEC filings: 150 ms parsing, alerts in under 7 seconds, zero inference API cost.</p></div></div>
+          <div class="tl" style="--accent: var(--gold)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Jan 2026</p>
+            <div class="tl__card"><span class="tl__tag">Build</span><h3>SHIELD · anti-scam AI on AWS</h3><p>8 minutes → 4.2 seconds per analysis, 91% accuracy across 10+ pilot users, 97% lower API cost.</p></div></div>
+          <div class="tl" style="--accent: var(--pink)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Jan 2026 – now</p>
+            <div class="tl__card"><span class="tl__tag">Top 100 nationally</span><h3>WikiTech: Road to Wiki · Cohort 2</h3><p>Selected by the Wikimedia Foundation; contributing to production Wikimedia tools through Gerrit code review.</p></div></div>
+          <div class="tl" style="--accent: var(--cyan)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Mar – Jul 2026</p>
+            <div class="tl__card"><span class="tl__tag">Open source</span><h3>OWASP OpenCRE contributor</h3><p>Two merged PRs: a production crash caused by variable shadowing, and a CodeQL-flagged open redirect fixed with HTTPS allowlisting.</p></div></div>
+          <div class="tl" style="--accent: var(--pink)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Jun 2026</p>
+            <div class="tl__card"><span class="tl__tag">Build</span><h3>iWebify · LLM application compiler</h3><p>9-stage pipeline, targeted repair engine and a 20-prompt production + adversarial eval suite.</p></div></div>
+          <div class="tl" style="--accent: var(--gold)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Jul – Sep 2026</p>
+            <div class="tl__card"><span class="tl__tag">#1 of 28,017</span><h3>Data Analyst Intern · Bluestock Fintech</h3><p>Built a mutual fund analytics platform for 40 funds — Sharpe, Sortino, VaR/CVaR, drawdown, alpha and beta — with a 4-page Streamlit dashboard.</p></div></div>
+          <div class="tl" style="--accent: var(--violet)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Aug 2026</p>
+            <div class="tl__card"><span class="tl__tag">Top 100 / 1,400+</span><h3>Sarthi Kalyan · XPRIZE Build with Gemini</h3><p>Top 7% of global submissions, and a CraftNCode National Finalist.</p></div></div>
+          <div class="tl" style="--accent: var(--cyan)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Sep 2026</p>
+            <div class="tl__card"><span class="tl__tag">Top 25</span><h3>CaseVera · Hacker House Goa 2026</h3><p>AI investigation agent that found both hidden fraud patterns in the challenge dataset.</p></div></div>
+          <div class="tl tl--now" style="--accent: var(--green)"><span class="tl__node" aria-hidden="true"></span><p class="tl__when">Now</p>
+            <div class="tl__card"><span class="tl__tag">Open to work</span><h3>Looking for AI/ML &amp; SWE internships</h3><p>AI agents, retrieval systems and the backend that keeps them honest.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ stack -->
+    <section class="section stack" id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">(06) Stack</p>
+          <h2 class="title" id="stack-title" data-split>Tools I <em>ship</em> with.</h2>
+        </header>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__row" data-dir="1">
+          <ul>
+            <li class="tech"><svg style="color:#3776AB"><use href="assets/img/icons.svg#i-python"/></svg>Python</li>
+            <li class="tech"><svg style="color:#9ab0ad"><use href="assets/img/icons.svg#i-langgraph"/></svg>LangGraph</li>
+            <li class="tech"><svg style="color:#8E75B2"><use href="assets/img/icons.svg#i-gemini"/></svg>Gemini</li>
+            <li class="tech"><svg style="color:#FF9900"><use href="assets/img/icons.svg#i-aws"/></svg>Bedrock</li>
+            <li class="tech"><svg style="color:#FFD21E"><use href="assets/img/icons.svg#i-huggingface"/></svg>Hugging Face</li>
+            <li class="tech"><svg><use href="assets/img/icons.svg#i-chromadb"/></svg>ChromaDB</li>
+            <li class="tech"><svg style="color:#2f80ed"><use href="assets/img/icons.svg#i-faiss"/></svg>FAISS</li>
+            <li class="tech"><svg style="color:#DC244C"><use href="assets/img/icons.svg#i-qdrant"/></svg>Qdrant</li>
+            <li class="tech"><svg style="color:#009688"><use href="assets/img/icons.svg#i-fastapi"/></svg>FastAPI</li>
+            <li class="tech"><svg style="color:#E92063"><use href="assets/img/icons.svg#i-pydantic"/></svg>Pydantic</li>
+            <li class="tech"><svg style="color:#2496ED"><use href="assets/img/icons.svg#i-docker"/></svg>Docker</li>
+            <li class="tech"><svg style="color:#4285F4"><use href="assets/img/icons.svg#i-gcp"/></svg>Google Cloud</li>
+          </ul>
+        </div>
+        <div class="marquee__row" data-dir="-1">
+          <ul>
+            <li class="tech"><svg style="color:#3178C6"><use href="assets/img/icons.svg#i-typescript"/></svg>TypeScript</li>
+            <li class="tech"><svg style="color:#F7DF1E"><use href="assets/img/icons.svg#i-javascript"/></svg>JavaScript</li>
+            <li class="tech"><svg style="color:#ED8B00"><use href="assets/img/icons.svg#i-java"/></svg>Java</li>
+            <li class="tech"><svg style="color:#2672AB"><use href="assets/img/icons.svg#i-cpp"/></svg>C++</li>
+            <li class="tech"><svg style="color:#22D3EE"><use href="assets/img/icons.svg#i-sql"/></svg>SQL</li>
+            <li class="tech"><svg style="color:#4169E1"><use href="assets/img/icons.svg#i-postgresql"/></svg>PostgreSQL</li>
+            <li class="tech"><svg style="color:#669DF6"><use href="assets/img/icons.svg#i-bigquery"/></svg>BigQuery</li>
+            <li class="tech"><svg style="color:#8f7fd1"><use href="assets/img/icons.svg#i-pandas"/></svg>Pandas</li>
+            <li class="tech"><svg style="color:#4DABCF"><use href="assets/img/icons.svg#i-numpy"/></svg>NumPy</li>
+            <li class="tech"><svg style="color:#FF4B4B"><use href="assets/img/icons.svg#i-streamlit"/></svg>Streamlit</li>
+            <li class="tech"><svg style="color:#FFFFFF"><use href="assets/img/icons.svg#i-nextjs"/></svg>Next.js</li>
+            <li class="tech"><svg style="color:#61DAFB"><use href="assets/img/icons.svg#i-react"/></svg>React</li>
+            <li class="tech"><svg style="color:#FCC624"><use href="assets/img/icons.svg#i-linux"/></svg>Linux</li>
+            <li class="tech"><svg style="color:#2088FF"><use href="assets/img/icons.svg#i-githubactions"/></svg>GitHub Actions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="stack__groups">
+          <div class="group" style="--accent: var(--cyan)" data-reveal><h3>Languages</h3><p>Python · Java · C++ · C · SQL · JavaScript · TypeScript · Bash</p></div>
+          <div class="group" style="--accent: var(--violet)" data-reveal><h3>AI &amp; LLMs</h3><p>LangGraph · AI agents · RAG · agent evaluation · Gemini API · AWS Bedrock · Hugging Face · ChromaDB · FAISS · Qdrant</p></div>
+          <div class="group" style="--accent: var(--pink)" data-reveal><h3>Data</h3><p>PostgreSQL · SQLite · BigQuery · Pandas · NumPy · ETL pipelines · Plotly · TigerGraph</p></div>
+          <div class="group" style="--accent: var(--gold)" data-reveal><h3>Backend &amp; Cloud</h3><p>FastAPI · Pydantic · REST APIs · React · Next.js · AWS · Google Cloud · Docker · Git · Linux · CI/CD</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ recognition -->
+    <section class="section recognition" id="recognition" aria-labelledby="rec-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">(07) Recognition</p>
+          <h2 class="title" id="rec-title" data-split>More <em>receipts</em>.</h2>
+        </header>
+        <div class="bento">
+          <article class="cell cell--wide" style="--accent: var(--violet)" data-reveal><div class="cell__k"><span>CraftNCode</span><b>Nationals</b></div><p class="cell__v">National Finalist</p><p>With Sarthi Kalyan, the multi-agent welfare scheme assistant.</p></article>
+          <article class="cell cell--wide" style="--accent: var(--pink)" data-reveal><div class="cell__k"><span>Wikimedia Foundation</span><b>Cohort 2</b></div><p class="cell__v">Top 100 <small>students nationally</small></p><p>WikiTech: Road to Wiki — contributing to production Wikimedia tools via Gerrit.</p></article>
+          <article class="cell" style="--accent: var(--cyan)" data-reveal><div class="cell__k"><span>100x School × Superteam</span><b>$450</b></div><p class="cell__v">Top 10 <small>/ 232 teams</small></p><p>Hackathon prize for DugTrio.</p></article>
+          <article class="cell" style="--accent: var(--green)" data-reveal><div class="cell__k"><span>OpenCode'25</span><b>~Top 3%</b></div><p class="cell__v">#65 <small>/ 2,055</small></p><p>Open-source contribution program ranking.</p></article>
+          <article class="cell" style="--accent: var(--gold)" data-reveal><div class="cell__k"><span>MUJ · CSE</span><b>2026</b></div><p class="cell__v">Excellence <small>award</small></p><p>Student Excellence Award, hackathon category.</p></article>
+          <article class="cell" style="--accent: var(--sky)" data-reveal><div class="cell__k"><span>AWS</span><b>Fully funded</b></div><p class="cell__v">Graduate</p><p>AWS AI &amp; ML Scholars nanodegree.</p></article>
+          <article class="cell cell--certs" data-reveal><div class="cell__k"><span>Certifications</span><b>Also</b></div>
+            <div class="certs"><span class="chip">McKinsey.org Forward Program</span><span class="chip">Google GEAR — Gemini Enterprise Agent Ready</span><span class="chip">25+ Google Cloud Skill Badges</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ terminal -->
+    <section class="section term-sec" id="terminal" aria-labelledby="term-title">
+      <div class="container">
+        <header class="section-head" style="text-align:center; justify-items:center">
+          <p class="eyebrow">(08) Playground</p>
+          <h2 class="title" id="term-title" data-split>Ask the <em>terminal</em>.</h2>
+          <p class="lede">Type <span class="mono">help</span> — or tap a command below.</p>
+        </header>
+        <div class="term" data-reveal>
+          <div class="term__bar" aria-hidden="true"><i></i><i></i><i></i><span>shaurya@portfolio: ~</span></div>
+          <div class="term__body" id="term-body" role="log" aria-live="polite" data-lenis-prevent>
+            <div class="ln"><span class="dim">Last login: from the internet · type</span> <span class="acc">help</span> <span class="dim">to see what I can do.</span></div>
+          </div>
+          <form class="term__form" id="term-form" autocomplete="off">
+            <label for="term-input">shaurya@portfolio:~$</label>
+            <input id="term-input" name="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command">
+          </form>
+        </div>
+        <div class="term__hints">
+          <button type="button" data-cmd="whoami">whoami</button>
+          <button type="button" data-cmd="projects">projects</button>
+          <button type="button" data-cmd="awards">awards</button>
+          <button type="button" data-cmd="stack">stack</button>
+          <button type="button" data-cmd="contact">contact</button>
+          <button type="button" data-cmd="sudo hire shaurya">sudo hire shaurya</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow" style="justify-content:center">(09) Contact</p>
+        <h2 class="contact__title" id="contact-title" data-split>Let's build something that <em>reasons</em>.</h2>
+        <p class="contact__lede" data-reveal>Open to AI/ML and Software Engineering internships. The inbox is open — so is LinkedIn.</p>
+        <a class="mail" href="mailto:shaurya04289@gmail.com" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          shaurya04289@gmail.com
+        </a>
+        <div class="contact__row">
+          <button class="btn btn--ghost" type="button" data-copy="shaurya04289@gmail.com" data-magnetic>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span>Copy email</span></button>
+        </div>
+        <div class="socials">
+          <a class="social" href="https://github.com/BEAST04289" target="_blank" rel="noopener" aria-label="GitHub" data-magnetic><svg aria-hidden="true"><use href="assets/img/icons.svg#i-github"/></svg></a>
+          <a class="social" href="https://www.linkedin.com/in/shaurya--upadhyay/" target="_blank" rel="noopener" aria-label="LinkedIn" data-magnetic><svg aria-hidden="true"><use href="assets/img/icons.svg#i-linkedin"/></svg></a>
+          <a class="social" href="https://t.me/BEAST04289" target="_blank" rel="noopener" aria-label="Telegram" data-magnetic><svg aria-hidden="true"><use href="assets/img/icons.svg#i-telegram"/></svg></a>
+          <a class="social" href="mailto:shaurya04289@gmail.com" aria-label="Email" data-magnetic><svg aria-hidden="true"><use href="assets/img/icons.svg#i-gmail"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Shaurya Upadhyay</span>
+      <span class="clock">Jaipur, IN · <b data-clock>--:--</b> IST</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/scrolltrigger.min.js" defer></script>
+  <script src="assets/vendor/splittext.min.js" defer></script>
+  <script src="assets/vendor/scrambletextplugin.min.js" defer></script>
+  <script src="assets/vendor/drawsvgplugin.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>

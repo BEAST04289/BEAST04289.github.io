@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- Source for assets/img/og.png (1200×630) and apple-touch-icon.png. Not linked from the site. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>og card</title>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/space-grotesk-latin.woff2") format("woff2"); font-weight: 300 700; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin.woff2") format("woff2"); font-weight: 400 700; }
+    @font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif-italic-latin.woff2") format("woff2"); font-style: italic; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0a0a0a; }
+    .card {
+      position: relative; width: 1200px; height: 630px; overflow: hidden; padding: 70px 78px;
+      background:
+        radial-gradient(600px 420px at 85% 30%, rgba(255,255,255,.06), transparent 70%),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,.14) 99%, transparent) 0 0 / 26px 26px,
+        #0a0a0a;
+      color: #ededed; font-family: "Space Grotesk", sans-serif;
+      display: grid; align-content: space-between;
+    }
+    .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #0a0a0a 30%, transparent 75%); pointer-events: none; }
+    .card > * { position: relative; z-index: 1; }
+    .role { font: 600 22px/1 "JetBrains Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: #a3a3a3; }
+    .role b { background: linear-gradient(100deg, #67e8f9, #a78bfa 52%, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    h1 { margin: 22px 0 0; font-size: 118px; line-height: .9; letter-spacing: -.055em; font-weight: 600; }
+    h1 span { color: #bdbdbd; }
+    p { margin: 22px 0 0; font-size: 34px; color: #d4d4d4; letter-spacing: -.015em; }
+    p em { font-family: "Instrument Serif", serif; background: linear-gradient(100deg, #67e8f9, #a78bfa 52%, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stats { display: flex; gap: 46px; align-items: flex-end; }
+    .stat b { display: block; font-size: 54px; letter-spacing: -.04em; line-height: 1; }
+    .stat span { font: 500 17px/1.3 "JetBrains Mono", monospace; color: #737373; letter-spacing: .06em; }
+    .url { margin-left: auto; font: 500 20px/1 "JetBrains Mono", monospace; color: #737373; }
+    .icon { width: 180px; height: 180px; display: grid; place-items: center; background: #0a0a0a; border-radius: 0; }
+    .icon div { width: 150px; height: 150px; border-radius: 38px; border: 3px solid #333; display: grid; place-items: center; font: 600 66px/1 "Space Grotesk"; letter-spacing: -.04em; color: #ededed; background: #121212; }
+  </style>
+</head>
+<body>
+  <div class="card" id="og">
+    <div>
+      <div class="role"><b>AI Engineer</b> · RAG · AI agents · Software</div>
+      <h1>Shaurya<br><span>Upadhyay</span></h1>
+      <p>I build AI agents and RAG systems that <em>ship</em>.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b style="color:#fbbf24">#1</b><span>of 28,017</span></div>
+      <div class="stat"><b style="color:#a78bfa">Top 100</b><span>XPRIZE · 1,400+</span></div>
+      <div class="stat"><b style="color:#f472b6">#14</b><span>IIT Madras · 2,200+</span></div>
+      <div class="url">beast04289.github.io</div>
+    </div>
+  </div>
+  <div class="icon" id="icon"><div>SU</div></div>
+</body>
+</html>
