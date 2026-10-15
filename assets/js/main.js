@@ -104,9 +104,11 @@ function initCursor(gsap) {
   document.addEventListener('mouseout', (e) => { if (!e.relatedTarget) cur.classList.add('is-hidden'); });
   document.addEventListener('pointerover', (e) => {
     const t = e.target;
-    const interactive = t.closest('a, button, input, [data-magnetic]');
-    cur.classList.toggle('is-link', !!interactive);
-    cur.classList.toggle('is-view', !interactive && !!t.closest('[data-cursor="view"]'));
+    const link = t.closest('a, button, input, [data-magnetic]');
+    // the whole project card is a link (stretched title link) and shows "View"; its inner pills stay links
+    const view = !!t.closest('[data-cursor="view"]') && (!link || link.classList.contains('project__link'));
+    cur.classList.toggle('is-view', view);
+    cur.classList.toggle('is-link', !!link && !view);
   });
 }
 
